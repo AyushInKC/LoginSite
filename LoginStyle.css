@@ -16,20 +16,19 @@ body {
 .loginContainer {
   text-align: center;
 }
-
 #log {
   margin-bottom: 2vh;
   font-size: 2.1rem;
-  color: #333;
+  color: #000000;
 }
 
 .Username, .Password {
-  margin-bottom: 20px;
+  margin-bottom: 2.5vh;
 }
 
 input {
   width: 100%;
-  padding: 10px;
+  padding: 1vh;
   border: 2px solid #ddd;
   border-radius: 30px;
   font-size: 16px;
@@ -89,4 +88,31 @@ i{
 
 a{
   color:black;
+}
+
+.Username i{
+  margin-bottom: 1vh;
+}
+
+ .forget{
+  margin-top: 2vh;
+  color: black;
+  text-decoration: none;
+}
+
+ .forget:hover {
+  text-decoration: underline;
+  color: #1054e8;
+}
+
+.acc{
+  margin-top: 2vh;
+  color: black;
+  text-decoration: none; 
+}
+
+
+.acc:hover {
+  text-decoration: underline;
+  color: #1054e8;
 }

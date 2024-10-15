@@ -1,10 +1,100 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #10e8e8;
+  font-family: Arial, sans-serif;
+}
+.SignUpContainer{
+  text-align: center;
+}
+
+#signup{
+  margin-bottom: 2vh;
+  font-size: 2.1rem;
+  color: #000000;
+
+}
+
+.Name , .Email , .Password{
+  margin-bottom: 2.5vh;
+}
+
+input {
+  width: 100%;
+  padding: 1vh;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.signUpCredentials{
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.956);
+  width:350px;
+  text-align: center;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 3vh;
+  background-color: #5a67d8;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 
-body{
-  background-color: black;
-  
+.submitBtn:hover {
+  background-color: #4c51bf;
+  transform: scale(1.1);
+}
+i{
+  color: black;
+}
+
+a{ 
+  margin-top: 1vh;
+  color:black;
+}
+.gender{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+
+.Name :hover , .Email :hover , .Password :hover{
+  border-color: #5a67d8;
+  transform: scale(1.2);
+  transition: all 0.2s ease;  
+}
+
+.gender{
+  font-weight: 200;
+}
+
+#loginPage{
+  text-decoration: none;
+}
+
+#loginPage:hover{
+  font-size: 1rem;
+  text-decoration: underline;
+  color: #1054e8;
 }
