@@ -79,7 +79,7 @@ a{
   margin-bottom: 2vh;
 }
 
-.Name :hover , .Email :hover , .Password :hover{
+.Name :hover , .Email :hover , .Password input:hover{
   border-color: #5a67d8;
   transform: scale(1.2);
   transition: all 0.2s ease;  
@@ -97,4 +97,14 @@ a{
   font-size: 1rem;
   text-decoration: underline;
   color: #1054e8;
+}
+li {
+  color: red;
+  list-style-type:none ;
+}
+li.valid {
+  color: green;
+}
+li.invalid {
+  color: red;
 }

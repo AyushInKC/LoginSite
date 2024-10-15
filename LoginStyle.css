@@ -116,3 +116,8 @@ a{
   text-decoration: underline;
   color: #1054e8;
 }
+
+
+.rememberMe input {
+  margin-right: 10px;
+}

@@ -8,30 +8,38 @@
 </head>
 <body>
 <div class="SignUpContainer">
-<div class="signUpCredentials">
-   <h2 id="signup">Sign Up</h2>
-   <div class="Name">
-   <input type="text" required placeholder="Name">
+  <div class="signUpCredentials">
+    <h2 id="signup">Sign Up</h2>
+    <div class="Name">
+      <input type="text" required placeholder="Name">
+    </div>
+    <div class="Email">
+      <input type="email" required placeholder="Email">
+    </div>
+    <div class="Password">
+      <input type="password" id="passInput" required placeholder="Password">
+      <ul>
+        <li id="eightChar" class="invalid">Contains 8 Characters</li>
+        <li id="lowerCase" class="invalid">Contains LowerCase Characters</li>
+        <li id="upperCase" class="invalid">Contains UpperCase Characters</li>
+        <li id="containsNumber" class="invalid">Contains Numeric Value</li>
+        <li id="specialChar" class="invalid">Contains special Characters</li>
+      </ul>
+    </div>
+    <div class="gender">
+      <input type="radio" id="male" name="gender" required><label>Male</label>
+      <input type="radio" id="female" name="gender" required><label>Female</label>
+      <input type="radio" id="other" name="gender" required><label>Other</label>
+    </div>
+    <div>
+      <button type="submit" class="submitBtn">Sign In</button>
+    </div>
+    <div class="AlreadyHaveAcc">
+      <a href="login.html" id="loginPage">Already have an Account? Click Me!</a>
+    </div>
   </div>
-  <div class="Email">
-    <input type="email" required placeholder="Email">
-  </div>
-  <div class="Password">
-    <input type="password" required placeholder="Password">
-  </div>
-  <div class="gender">
-    <input type="radio" id="male" name="gender" required><label>Male</label>
-    <input type="radio" id="female" name="gender"  required><label>Female</label>
-    <input type="radio" id="other" name="gender" required><label>Other</label>
- 
-  </div>
-   <div>
-    <button type="submit" class="submitBtn">Sign In</button>
-   </div>
-   <div class="AlreadyHaveAcc">
-    <a href="login.html" id="loginPage">Already have an Account? Click Me!</a>
-   </div>
 </div>
-</div>
+
+<script src="passwordValidation.js"></script>
 </body>
 </html>
