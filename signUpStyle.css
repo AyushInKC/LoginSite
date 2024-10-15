@@ -108,3 +108,16 @@ li.valid {
 li.invalid {
   color: red;
 }
+
+
+.Password img{
+  display: flex;
+  height: 2vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.Password img .open{
+  height: 10vh;
+}
