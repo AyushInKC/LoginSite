@@ -1,4 +1,5 @@
 const slides = document.querySelectorAll(".images img");
+const nextbtn =document.querySelector(".next")
 var count = 0;
 
 slides.forEach((slide, index) => {
@@ -26,3 +27,7 @@ const slideImage = () => {
     slide.style.transform = `translateX(-${count * 100}%)`;
   });
 };
+
+setInterval(()=>{
+  nextbtn.click()
+},2000)

@@ -105,7 +105,7 @@ header{
 
 .face :hover{
   cursor: pointer;
-  color: #010f2e;
+  color: #174dc0;
   transform: scale(1.5);
 }
 
@@ -117,7 +117,7 @@ transform: scale(1.5);
 }
 .linked :hover{
   cursor: pointer;
-  color: #01263a;  
+  color: #3ab9fe;  
   transform: scale(1.5);
 
 }
