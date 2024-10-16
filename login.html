@@ -12,10 +12,12 @@
     <div class="loginCredentials">
       <h2 id="log">Login</h2>
       <div class="Username">
-        <i class="fa-solid fa-user"></i><input type="text" required placeholder="Username">
+        <i id="lockClose" class="fa-solid fa-user"></i>
+        <input type="text" required placeholder="Username">
       </div>
       <div class="Password">
-        <i class="fa-solid fa-lock"></i> <input type="password" required placeholder="Password">
+        <i id="eyeicon" class="fa-solid fa-eye"></i> 
+        <input type="password" id="pass" required placeholder="Password">
       </div>
       <div class="rememberMe">
         <input id="box" type="checkbox"><label>Remember Me</label>
@@ -23,12 +25,14 @@
       <div> 
         <button type="submit" class="submitBtn">Login</button>
       </div>
-      <div >
+      <div>
         <a href="forgetPass.html" class="forget"><i class="fas fa-unlock-alt"></i> Forget Password?</a>
         <br>
         <a href="signup.html" class="acc">Don't have an account? Click here!</a>
       </div>
     </div>
   </div>
+
+  <script src="login.js"></script>
 </body>
 </html>

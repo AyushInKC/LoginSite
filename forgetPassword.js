@@ -1,4 +1,35 @@
-var passInput = document.getElementById('passInput');
+var pass1 = document.getElementById('pass1');
+var pass2 = document.getElementById('pass2');
+
+function checkPassword() {
+    var pass1Value = pass1.value;  
+    var pass2Value = pass2.value;  
+    console.log(pass1Value, pass2Value); 
+    var message = document.getElementById("message");
+
+    if (pass1Value.length < 8) {
+        alert("Password length should be greater than 8");
+        return;
+    }
+
+    if (pass1Value.length != 0) {
+       
+        if (pass1Value == pass2Value) {
+            message.textContent = "Password Matched";
+            message.style.backgroundColor = "#3ae374";
+        } else {
+            message.textContent = "Password not Matched";
+            message.style.backgroundColor = "#ff4d4d";
+        }
+
+    } else {
+        alert("Password can't be empty");
+        message.textContent = "";
+    }
+}
+
+
+var passInput = document.getElementById('pass1');
 var eightChar = document.getElementById('eightChar');
 var lowerCase = document.getElementById('lowerCase');
 var upperCase = document.getElementById('upperCase');
@@ -8,6 +39,7 @@ var specialChar = document.getElementById('specialChar');
 passInput.onkeyup = function() {
   var userPass = passInput.value;
 
+  // Lowercase letters
   var lowerCasePattern = /[a-z]/g;
   if (userPass.match(lowerCasePattern)) {
     lowerCase.classList.add('valid');
@@ -17,6 +49,7 @@ passInput.onkeyup = function() {
     lowerCase.classList.add('invalid');
   }
 
+  // Uppercase letters
   var upperCasePattern = /[A-Z]/g;
   if (userPass.match(upperCasePattern)) {
     upperCase.classList.add('valid');
@@ -26,6 +59,7 @@ passInput.onkeyup = function() {
     upperCase.classList.add('invalid');
   }
 
+  // Numbers
   var numberPattern = /[0-9]/g;
   if (userPass.match(numberPattern)) {
     containsNumber.classList.add('valid');
@@ -35,6 +69,7 @@ passInput.onkeyup = function() {
     containsNumber.classList.add('invalid');
   }
 
+  // Length check for 8 characters
   if (userPass.length >= 8) {
     eightChar.classList.add('valid');
     eightChar.classList.remove('invalid');
@@ -43,6 +78,7 @@ passInput.onkeyup = function() {
     eightChar.classList.add('invalid');
   }
 
+  // Special characters
   var specialCharPattern = /[@!#$%^&*(),.?":{}|<>_-]/g;
   if (userPass.match(specialCharPattern)) {
     specialChar.classList.add('valid');
@@ -52,33 +88,3 @@ passInput.onkeyup = function() {
     specialChar.classList.add('invalid');
   }
 };
-
-
-let eyeicon=document.getElementById('close');
-let password=document.getElementById('passInput');
-
-eyeicon.onclick=function(){
-    if(password.type=="password"){
-        password.type="text";
-        eyeicon.src="eyesOpen.png";
-    }
-    else{
-        password.type="password";
-        eyeicon.src="eyesClose.png";
-    }
-}
-
-
-var email=document.getElementById('EmailPortal').value;
-
-const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-if(emailRegex.text(email)){
-  return;
-}
-else{
-  alert("Provide a valid Email");
-  return
-}
-
-

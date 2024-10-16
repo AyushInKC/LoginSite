@@ -59,7 +59,7 @@ input:hover {
     transition: all 0.2s ease;
 }
 
-button {
+#submitBtn {
     width: 100%;
     padding: 12px;
     background-color: #5a67d8;
@@ -76,3 +76,25 @@ button:hover {
     background-color: #4c51bf;
     transform: scale(1.05);
 }
+
+p{
+    height: 5vh;
+    color: black;
+}
+
+#message{
+    font-size: 1.5rem;
+}
+
+li {
+    color: red;
+    list-style-type:none ;
+  }
+  li.valid {
+    color: green;
+  }
+  li.invalid {
+    color: red;
+  }
+  
+  

@@ -121,3 +121,7 @@ li.invalid {
 .Password img .open{
   height: 10vh;
 }
+.pass{
+  display: flex;
+  align-items: center;
+}

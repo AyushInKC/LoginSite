@@ -12,14 +12,22 @@
         <div class="forget">
        <h2>Don't worry we are here to help you!</h2>
        <div class="pass">
-       <input type="password" required placeholder="Password">
+       <input type="password" id="pass1" required placeholder="Password">
     </div>
+     <ul>
+        <li id="eightChar" class="invalid">Contains 8 Characters</li>
+        <li id="lowerCase" class="invalid">Contains LowerCase Characters</li>
+        <li id="upperCase" class="invalid">Contains UpperCase Characters</li>
+        <li id="containsNumber" class="invalid">Contains Numeric Value</li>
+        <li id="specialChar" class="invalid">Contains special Characters</li>
+      </ul>
     <div class="cnfpass">
-       <input type="password" required placeholder="Confirm Password">
+       <input type="password" id="pass2" required placeholder="Confirm Password">
     </div>
-    <button  type="submit" class="submitBtn">Done</button>
+    <p id="message"></p>
+    <button id="submitBtn" onclick="checkPassword()" >Submit</button>
       </div>
     </div>
-    
+    <script src="forgetPassword.js"></script>
 </body>
 </html>
