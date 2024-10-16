@@ -67,18 +67,3 @@ eyeicon.onclick=function(){
         eyeicon.src="eyesClose.png";
     }
 }
-
-
-var email=document.getElementById('EmailPortal').value;
-
-const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-if(emailRegex.text(email)){
-  return;
-}
-else{
-  alert("Provide a valid Email");
-  return
-}
-
-
