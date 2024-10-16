@@ -183,7 +183,7 @@ footer p , a{
  }
 
  .images {
-  background-color: #cd0909;
+  background-color: white;
   margin-top: 100vh;
   display: flex;
   justify-content: center;
@@ -354,8 +354,16 @@ footer p , a{
 .Prev{
   z-index: 0;
 }
-
-
 .next{
   z-index: 0;
+}
+
+#star{
+  font-size: 5vh;
+  margin: 0.5vh;
+}
+#star:hover{
+  color: yellow;
+   border-color: gold;
+  transform: scale(1.5);
 }
