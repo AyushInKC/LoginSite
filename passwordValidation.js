@@ -105,25 +105,25 @@ eyeicon.onclick=function(){
 
 
 
-var emailValidity=document.querySelector('.emailValidity').value
+// var emailValidity=document.querySelector('.emailValidity').value
 
-var email= document.getElementById('email')
+// var email= document.getElementById('email')
 
-email.onkeyup=function(){
-  var emailValue=email.value;
-  const referenceEmail="@.";
-  var isValidEmail=false;
-  for(var i=0;i<email.length;i++){
-    if(referenceEmail.includes(emailValue[i])){
-   isValidEmail=true;
-   break;
-    }
-  }
-  if(isValidEmail){
-     emailValidity.classList.remove('.emailValidity');
-  }
-  else{
+// email.onkeyup=function(){
+//   var emailValue=email.value;
+//   const referenceEmail="@.";
+//   var isValidEmail=false;
+//   for(var i=0;i<email.length;i++){
+//     if(referenceEmail.includes(emailValue[i])){
+//    isValidEmail=true;
+//    break;
+//     }
+//   }
+//   if(isValidEmail){
+//      emailValidity.classList.remove('.emailValidity');
+//   }
+//   else{
 
-  }
+//   }
 
-}
+// }
