@@ -1,7 +1,8 @@
 const slides = document.querySelectorAll(".images img");
 const nextbtn =document.querySelector(".next")
 var count = 0;
-
+ var Allstars=document.querySelectorAll('.rating i')
+ var thank=document.querySelector('.hideThank')
 slides.forEach((slide, index) => {
   slide.style.left = `${index * 100}%`;
 });
@@ -31,3 +32,18 @@ const slideImage = () => {
 setInterval(()=>{
   nextbtn.click()
 },2000)
+
+ Allstars.forEach((faStar, i) =>{
+   faStar.addEventListener("click", ()=>{
+       thank.classList.remove('hideThank')
+       console.log(i)  
+       for(var j=0;j<Allstars.length;j++){
+       if(j<=i){
+          Allstars[j].style.color ="yellow"
+       }
+       else{
+        Allstars[j].style.color="black"
+       }
+       }
+   })
+ })

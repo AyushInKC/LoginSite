@@ -21,13 +21,11 @@ function checkPassword() {
             message.textContent = "Password not Matched";
             message.style.backgroundColor = "#ff4d4d";
         }
-
     } else {
         alert("Password can't be empty");
         message.textContent = "";
     }
 }
-
 
 var passInput = document.getElementById('pass1');
 var eightChar = document.getElementById('eightChar');
@@ -39,37 +37,42 @@ var specialChar = document.getElementById('specialChar');
 passInput.onkeyup = function() {
   var userPass = passInput.value;
 
-  // Lowercase letters
-  var lowerCasePattern = /[a-z]/g;
-  if (userPass.match(lowerCasePattern)) {
-    lowerCase.classList.add('valid');
-    lowerCase.classList.remove('invalid');
-  } else {
-    lowerCase.classList.remove('valid');
+  var isLowerCase=false;
+
+   for(var i=0;i<userPass.length;i++){
+      if(userPass[i]>='a' && userPass[i]<='z'){
+        isLowerCase=true;
+        break;
+      } 
+   }
+
+   if(isLowerCase){
+    lowerCase.classList.add('valid')
+    lowerCase.classList.remove('invalid')
+   }
+   else{
     lowerCase.classList.add('invalid');
-  }
+    lowerCase.classList.remove('valid');
+   }
 
-  // Uppercase letters
-  var upperCasePattern = /[A-Z]/g;
-  if (userPass.match(upperCasePattern)) {
-    upperCase.classList.add('valid');
-    upperCase.classList.remove('invalid');
-  } else {
-    upperCase.classList.remove('valid');
+   var isUpperCase=false;
+
+   for(var i=0;i<userPass.length;i++){
+      if(userPass[i]>='A' && userPass[i]<='Z'){
+    isUpperCase=true;
+        break;
+      }
+   }
+
+   if(isUpperCase){
+    upperCase.classList.add('valid')
+    upperCase.classList.remove('invalid')
+   }
+   else{
     upperCase.classList.add('invalid');
-  }
+    upperCase.classList.remove('valid');
+   }
 
-  // Numbers
-  var numberPattern = /[0-9]/g;
-  if (userPass.match(numberPattern)) {
-    containsNumber.classList.add('valid');
-    containsNumber.classList.remove('invalid');
-  } else {
-    containsNumber.classList.remove('valid');
-    containsNumber.classList.add('invalid');
-  }
-
-  // Length check for 8 characters
   if (userPass.length >= 8) {
     eightChar.classList.add('valid');
     eightChar.classList.remove('invalid');
@@ -78,13 +81,38 @@ passInput.onkeyup = function() {
     eightChar.classList.add('invalid');
   }
 
-  // Special characters
-  var specialCharPattern = /[@!#$%^&*(),.?":{}|<>_-]/g;
-  if (userPass.match(specialCharPattern)) {
-    specialChar.classList.add('valid');
-    specialChar.classList.remove('invalid');
-  } else {
-    specialChar.classList.remove('valid');
-    specialChar.classList.add('invalid');
-  }
-};
+ var hasNum=false;
+
+ for(var i=0;i<userPass.length;i++){
+     if(userPass[i]>=0 && userPass[i]<=9){
+      hasNum=true;
+      break;
+     }
+ }
+
+ if(hasNum){
+     containsNumber.classList.add('valid')
+     containsNumber.classList.remove('invalid')
+ }
+ else{
+  containsNumber.classList.remove('valid')
+     containsNumber.classList.add('invalid')
+ }
+  
+ var specialCharacters = "!@#$%^&*()_+-=/><,.;:~`";
+ var hasSpecialChar = false;
+ for (var i = 0; i < userPass.length; i++) {
+   if (specialCharacters.includes(userPass[i])) {
+     hasSpecialChar = true;
+     break;
+   }
+ }
+ if (hasSpecialChar) {
+  specialChar.classList.add('valid');
+  specialChar.classList.remove('invalid');
+} else {
+  specialChar.classList.add('invalid');
+  specialChar.classList.remove('valid');
+}
+
+}
