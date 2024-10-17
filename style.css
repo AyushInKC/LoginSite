@@ -385,3 +385,28 @@ font-size: 4vh;
   justify-content: center;
   margin-top: 1vh ;
 }
+
+
+@media (max-width: 1000px) {
+     .gpt4{
+        height: 4vh;
+        margin-right: 2vh;
+     }
+
+     .logsign{
+      height:2vh ;
+      margin-top: 2vh;
+      padding-top: 4vh;
+     }
+     .symbols{
+      flex-wrap: wrap;
+       padding-top: 3vh;
+     }
+     .symbols i{
+      display: flex;
+      margin-top: 2vh;
+      flex-direction: column;
+      margin-right: 2vh;
+      margin: 0;
+     }
+}
